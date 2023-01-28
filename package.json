@@ -1,0 +1,19 @@
+{
+  "name": "rahlesjo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  },
+  "dependencies": {
+    "docsify": "^4.13.0",
+    "leipzig": "^0.9.0"
+  }
+}
