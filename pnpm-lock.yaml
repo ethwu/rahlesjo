@@ -1,11 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/iosevka': ^4.5.4
   docsify: ^4.13.0
   docsify-cli: ^4.4.4
   leipzig: ^0.9.0
 
 dependencies:
+  '@fontsource/iosevka': 4.5.4
   docsify: 4.13.0
   leipzig: 0.9.0
 
@@ -13,6 +15,10 @@ devDependencies:
   docsify-cli: 4.4.4
 
 packages:
+
+  /@fontsource/iosevka/4.5.4:
+    resolution: {integrity: sha512-S3rNmYP8EvjeyAJ8mwtt+9CZK8p5LdxYXpgv9lSBtHbRkwjcg8MbPs7vzWLRYs0R0MRmpvlLw864xvn3XKXclA==}
+    dev: false
 
   /@sindresorhus/is/0.14.0:
     resolution: {integrity: sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==}

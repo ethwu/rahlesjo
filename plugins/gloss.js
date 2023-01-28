@@ -26,10 +26,29 @@
                 .split(GLOSS_SIGIL)
                 .filter(s => s.length > 0)
                 .map(s => `<p>${s.trim()}</p>`);
-            return `<div data-gloss>${sections.join('')}</div>`;
+            return `<pre data-gloss class="ipa">${sections.join('')}</pre>`;
         } else {
             // Pass through to default handling.
             return this.origin.code.apply(this, arguments);
+        }
+    }
+
+    /**
+     * The sigil marking inline IPA.
+     * @constant @type {string} @default
+     */
+    const IPA_SIGIL = 'ipa';
+
+    /**
+     * Wrap inline code starting with `ipa` in spans.
+     * @param {string} code - The text of the inline code.
+     * @returns {string} The rendered text.
+     */
+    function ipa(code) {
+        if (code.startsWith(IPA_SIGIL)) {
+            return `<span class="ipa">${code.slice(IPA_SIGIL.length)}</span>`;
+        } else {
+          return this.origin.code.apply(this, arguments);
         }
     }
 
@@ -38,5 +57,6 @@
     global.$docsify.markdown.renderer ??= {};
 
     global.$docsify.markdown.renderer.code = gloss;
+    global.$docsify.markdown.renderer.codespan = ipa;
 })(globalThis);
 
