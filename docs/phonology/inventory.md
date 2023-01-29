@@ -70,6 +70,7 @@
 </table>
 
 ## Vowel Inventory
+Vowel length is phonemic.
 
 <table>
   <thead>

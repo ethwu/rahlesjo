@@ -1,0 +1,31 @@
+/* Wrapper for dictionary section. */
+dict {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+/* Dictionary entry wrapper. */
+entry {
+}
+
+/* Dictionary key text. */
+term {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* Dictionary pronunciation entry. */
+pron {
+    flex: 1;
+    font-family: var(--monospace-font);
+}
+
+/* Dictionary definition. */
+def {
+    flex: 1;
+    margin-inline-start: 40px;
+}
+

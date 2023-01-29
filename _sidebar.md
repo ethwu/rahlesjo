@@ -1,2 +1,3 @@
 - [Phonology](docs/phonology.md)
   - [Phonetic Inventory](docs/phonology/inventory.md)
+- [Dictionary](docs/dict.md)
