@@ -52,11 +52,24 @@
         }
     }
 
+    const newRenderer = {
+        code: gloss,
+        codespan: ipa,
+    };
+
     global.$docsify ??= {markdown: {renderer: {}}};
     global.$docsify.markdown ??= {renderer: {}};
-    global.$docsify.markdown.renderer ??= {};
 
-    global.$docsify.markdown.renderer.code = gloss;
-    global.$docsify.markdown.renderer.codespan = ipa;
+    if (typeof global.$docsify.markdown == 'function') {
+        const OLD_MARKED_INIT = global.$docsify.markdown;
+        global.$docsify.markdown = function(marked, renderer) {
+            Object.assign(renderer, newRenderer);
+            return OLD_MARKED_INIT(marked, Object.assign(renderer, newRenderer));
+        };
+    } else {
+        global.$docsify.markdown.renderer ??= {};
+        Object.assign(global.$docsify.markdown.renderer, newRenderer);
+    }
+
 })(globalThis);
 

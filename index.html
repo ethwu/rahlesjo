@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Rahlesjo</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
@@ -16,13 +16,20 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'rahlesjo',
+      name: 'Rahlesjo',
       repo: '',
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
       plugins: [
         function(hook, vm) {
           hook.doneEach(() => Leipzig().gloss());
         }
       ],
+      markdown: {
+        smartypants: true,
+      },
     };
   </script>
   <script src="plugins/gloss.js"></script>

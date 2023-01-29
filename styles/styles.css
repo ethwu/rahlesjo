@@ -25,3 +25,19 @@ body {
 .markdown-section output::after {
     font-family: var(--monospace-family);
 }
+
+.markdown-section th,
+.markdown-section td {
+    border: none;
+}
+.markdown-section tr {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.markdown-section tbody th {
+    font-weight: normal;
+    text-align: left;
+}
+/* .markdown-section tbody th { */
+/*     background-color: white; */
+/* } */
